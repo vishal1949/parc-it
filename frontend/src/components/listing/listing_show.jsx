@@ -1,7 +1,11 @@
 import React from 'react';
 import GoogleMapContainer from '../map/map';
 import BookingFormContainer from '../bookings/booking_form_container';
-import "react-dates/initialize";
+import {
+  DateRangePicker,
+  SingleDatePicker,
+  DayPickerRangeController
+} from "react-dates";
 
 class ListingShow extends React.Component{
   componentDidMount(){
@@ -25,6 +29,10 @@ class ListingShow extends React.Component{
           </div>
           <div>IMAGE BELOW THIS</div>
           <img src={this.props.listing.photo}/>
+
+          <div>
+            <DayPickerRangeController />
+          </div>
       </div>
     );
   };
