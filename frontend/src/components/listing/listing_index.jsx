@@ -80,8 +80,8 @@ class ListingIndex extends React.Component{
       return null;
     }
     const listingMapStyle = {
-      width: '80%',
-      height: '80%',
+      width: '40%',
+      height: '40%',
       'marginLeft': 'auto',
       'marginRight': 'auto',
       'zIndex': '0',
