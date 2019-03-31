@@ -1,7 +1,7 @@
 $parc-green: #009900;
 
 .listing-index {
-  height: 100vh;
+  height: 65vh;
   h1 {
     // background-color: #009900;
     background: rgba(167, 201, 160, 0.4);
@@ -18,21 +18,24 @@ $parc-green: #009900;
 }
 .all-listings {
   margin-left: 4%;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   height: 80%;
   z-index: 5;
   .listing-item {
     margin-right: auto;
-    margin-left: auto;
+    // margin-left: 27%;
     align-items: center;
-    background: rgba(167, 201, 160, 0.4);
+    background: rgba(255, 255, 250, 0.4);
+    background-image: linear-gradient(90deg, rgba(250, 250, 250, .4), rgba(13, 160, 13, .8));
+    // opacity: .4;
     border-radius: 3px;
     display: flex;
     margin-bottom: 1em;
     padding: .5em;
     padding-left: 20px;
-    height: 100%;
-    width: 44%;
+    height: 315px;
+    width: 40.3%;
     
     
     .parking-logo{
@@ -43,12 +46,12 @@ $parc-green: #009900;
     }
     .listing-info {
       text-align: left;
-      margin-left: 5%;
       width: 100%;
       font-size: 20px;
       font-weight: 400;
       border-radius: 3px;
       margin: 0 auto;
+      margin-left: 5%;
     }
     #go-to-parking{
       // text-decoration: none;
