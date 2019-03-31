@@ -25,9 +25,13 @@ class ListingIndex extends React.Component{
   }
 
   componentDidMount(){
+    // this.props.fetchListings().then(action =>{
+    //   this.setState({ listing: action.listings });
+    // });
     this.props.fetchListings().then(action =>{
       this.setState({ listing: action.listings[0] });
     });
+    
   }
 
 
