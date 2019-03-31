@@ -124,12 +124,15 @@ handleFile(e){
   render(){
     return(
       <div className='entire-listing-form'>
-      <h1 className='main-title-new'>Make your very own listing! </h1>
-      <div className='main-title-new'>You're one step away from earning yourself some extra cash! Please fill
-          out the form below so we can get you settled in and ready to see the cash
-          come in to your pockets. We hope that you spread the word and bring your
-          friends and family as new users so they can start earning as well.
+      <div className='title-holder'>
+          <h1 className='main-title-new'>Make your very own listing! </h1>
+          <div className='main-title-new'>You're one step away from earning yourself some extra cash! Please fill
+              out the form below so we can get you settled in and ready to see the cash
+              come in to your pockets. We hope that you spread the word and bring your
+              friends and family as new users so they can start earning as well.
+          </div>
       </div>
+        
         <form className='listing-form' onSubmit={(e) => this.handleSubmit(e)}>
           <h3 className='listing-form-title'>Address</h3>
           <div className='attribute-titles'>Street: </div>

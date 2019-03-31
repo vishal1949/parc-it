@@ -268,18 +268,30 @@ input#text-box {
     // margin-left: 30px;
     text-align: center;
     border: 2px solid #009900;
-    margin: 0px 300px;
-    padding-right: 220px;
-    margin-right: 296px;
+    margin: 0% 34%;
+    // padding-right: 220px;
+    // margin-right: 296px;
     margin-top: 20px;
-    padding-bottom: 10px;
-    background: #009900
+    // padding-bottom: 10px;
+    background: #009900;
+    width: 300px;
+    justify-content: center;
+    display: block;
+
+    padding-right: 3.2%;
+    padding-bottom: 20px;
 }
 .attribute-titles{
     padding-left: 30px;
     color: white;
     text-decoration: underline;
     padding-bottom: 5px;
+}
+.title-holder{
+    // border: 1px solid black;
+    padding-bottom: 30px;
+    // background: rgba(0, 0, 5, 0.4);
+    color: white;
 }
 
 input.photo-submit-button{
@@ -291,21 +303,24 @@ input.photo-submit-button{
 
 .main-title-new{
     text-align: center;
+    color: rgb(244, 244, 244);
     // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    text-shadow: 4px 4px rgba(0, 0, 0, 0.9);
+    text-shadow: 1px 2px rgba(34, 130, 2, 0.9);
+    text-shadow:
+            -1px -1px rgb(34, 130, 2),
+            1px -1px rgb(34, 130, 2),
+            -1px 1px rgb(34, 130, 2),
+            1px 1px rgb(34, 130, 2);
 }
 
 .entire-listing-form{
-    margin: 0px 500px;
+    margin: 0% 26.2%;
     padding: 10px;
     color: white;
 }
 
 #root{
-    // background: url('https://img.sunset02.com/sites/default/files/styles/4_3_horizontal_inbody_900x506/public/image/2016/12/main/driveway-trees-jason-liske-0117.jpg') no-repeat center center fixed; 
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
+    background: url('http://wallpaperget.com/images/light-green-backgrounds-2.jpg') no-repeat center center fixed; 
     background-color: floralwhite;
     background-size: cover;
     z-index: -1;

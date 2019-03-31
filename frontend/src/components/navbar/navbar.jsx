@@ -26,6 +26,7 @@ class Navbar extends React.Component{
             return (
                 <div className='login-signup'>
                     <Link to='/listings' className='signin-stuff'><p>Parkings</p></Link> 
+                    <Link to='/listings/new' className='signin-stuff'><p>Add to Parkings</p></Link> 
                     <a className='signin-stuff' href=''
                         onClick={e => {
                             this.handleEvent(e);
@@ -44,6 +45,7 @@ class Navbar extends React.Component{
             return(
                 <div className='login-signup'>
                     <Link to='/listings' className='signin-stuff'><p>Parkings</p></Link> 
+                    <Link to='/listings/new' className='signin-stuff'><p>Add to Parkings</p></Link> 
                     <a className='signin-stuff' href=''
                         onClick={this.logout}><p>Log Out</p>
                     </a>
