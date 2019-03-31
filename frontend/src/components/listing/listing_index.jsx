@@ -91,16 +91,16 @@ class ListingIndex extends React.Component{
     return(
       <>
       <div className="listing-index">
-        {/* <h1>Available Parking Spots</h1> */}
+        <h1>Available Parking Spots</h1>
           <div className='map-div'>
             <GoogleMapContainer changeListing={this.changeListing} listings={listingsArray} style={listingMapStyle} />
           </div>
       </div>
           <div className="all-listings">
-            {/* {listingsArray.map(listing => {
+            {listingsArray.map(listing => {
               return <ListingIndexItem listing={listing} key={listing.id} />
-            })} */}
-            <ListingIndexItem listing={this.state.listing} /> 
+            })}
+            {/* <ListingIndexItem listing={this.state.listing} />  */}
           </div>
         
     </>

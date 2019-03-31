@@ -17,14 +17,13 @@ $parc-green: #009900;
 
 }
 .all-listings {
-  margin-left: 5%;
-  display: flex;
+  margin-left: 4%;
+  display: block;
   height: 80%;
   z-index: 5;
   .listing-item {
     margin-right: auto;
     margin-left: auto;
-    flex-direction: column;
     align-items: center;
     background: rgba(167, 201, 160, 0.4);
     border-radius: 3px;
@@ -33,17 +32,18 @@ $parc-green: #009900;
     padding: .5em;
     padding-left: 20px;
     height: 100%;
-    width: 60%;
+    width: 44%;
     
     
     .parking-logo{
       padding-top: 20px;
-      height: 60%;
-      width: 80%;
+      height: 300px;
+      width: 50%;
       margin-bottom: 15px;
     }
     .listing-info {
-      text-align: center;
+      text-align: left;
+      margin-left: 5%;
       width: 100%;
       font-size: 20px;
       font-weight: 400;
