@@ -22,6 +22,7 @@ $font-stack: Verdana, sans-serif;
 
 body {
   font-family: $font-stack;
+  margin: 0px;
 }
 
 // Components
@@ -60,7 +61,6 @@ h1#main-logo{
     display: flex;
     justify-content: space-between;
     background: #009900;
-    border-radius: 3px;
     padding: 5px;
     top: 0px;
     position: sticky;
