@@ -79,8 +79,9 @@ class ListingIndex extends React.Component{
       // can add little loading screen here
     }
     let listingsArray = Object.values(this.props.listings);
-    const listings = Object.values(this.props.listings);
+    let listings = Object.values(this.props.listings);
     if(this.coordinates.lat !== 0 || this.coordinates.lng !== 0){
+      listings = [];
       listingsArray.map(listing => {
         if ((listing.lat <= this.coordinates.lat + .0055 && listing.lat >= this.coordinates.lat - .0055) &&
           (listing.lng <= this.coordinates.lng + .0083 && listing.lng >= this.coordinates.lng - .0083)) {
