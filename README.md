@@ -5,7 +5,7 @@ An application/website that gives users the ability to host a private parking sp
 [Live Demo](https://parc-it.herokuapp.com/#/)
 
 ## Description
-* An application/website that gives users the ability to host a private parking spot (e.g. driveway, garage) and for other users to book those parking spots for a specified time frame (hourly, daily, weekly, monthly, etc).
+* An application/website that gives users the ability to host a private parking spot (e.g. driveway, garage) and for other users to book those parking spots for a specified time frame (hourly, daily, weekly, monthly, etc). The goal is to make finding parking easy, fast, and convenient.
 
 ## Technologies
 * This application is built using the M.E.R.N stack. 
@@ -29,7 +29,16 @@ Added Google maps to display real time hosted locations of parking spots in the 
 ![Initial](/readmeImgs/map1.jpg)
 ### With Search
 ![Initial](/readmeImgs/map2.jpg)
+### Code Snippet
+![code](/readmeImgs/filter.jpg)
 
 ## Airbnb Opensource Calendar React Component
 For the booking calendar, the application incorporates the Airbnb calendar. It features blocked out dates for bookings that have already been made. If a user is not logged in, the booking will not be created. It also renders errors when a user does not input any dates or half-filled dates.
 ![calendar](/readmeImgs/calendar.jpg)
+### Code Snippet
+![calendar](/readmeImgs/calendarCode.jpg)
+
+
+## Future Plans
+* Adding credit card api for making real transactions
+* Update created bookings

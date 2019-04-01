@@ -40,7 +40,6 @@ class ListingIndex extends React.Component{
 
 
   filterListings(){
-    // let result = [];
     console.log("reaching this")
     this.geocodeRequest(this.props.search).then(response => {
       this.coordinates.lat = response.lat;
@@ -50,7 +49,6 @@ class ListingIndex extends React.Component{
     });
   }
 
-  
   geocodeRequest(address){
     return fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAPjYkDq0-iiCd6W5-qCw46J-r0EW39L1U`,
@@ -70,8 +68,8 @@ class ListingIndex extends React.Component{
     if (Object.keys(this.props.listings).length === 0) {
       return null;
     }
-    let listingsArray = Object.values(this.props.listings);
-    let listings = Object.values(this.props.listings);
+    let listingsArray = Object.values(this.props.listings); //for mapping purposes
+    let listings = Object.values(this.props.listings); //for display purposes
     if(this.coordinates.lat !== 0 || this.coordinates.lng !== 0){
       listings = [];
       listingsArray.map(listing => {
