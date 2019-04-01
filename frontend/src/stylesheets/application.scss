@@ -210,15 +210,28 @@ footer{
 .close-modal-x{
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid black;
+    margin-left: -20px;
+    margin-top: -5px;
+    padding: 5px;
+    padding-bottom: 7px;
     text-align: center;
     width: 20px;
     height: 20px;
+    background: lightgray;
+
+
+}
+.close-modal-x:hover{
+    cursor: pointer;
 }
 
 .login-form-container{
     border: 2px solid #009900;
     background: white;
+    border-radius: 5%;
+    padding: 20px;
+    padding-left: 35px;
 
 }
 
