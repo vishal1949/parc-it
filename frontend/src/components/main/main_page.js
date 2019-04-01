@@ -19,19 +19,24 @@ class MainPage extends React.Component {
         <GoogleMapContainer listings={this.props.listings} />
         <br/>
         <div className='our-description'>
-          <h2 className='home-title'>What is P.A.R.C.</h2>
+          <h2 className='home-title'>Welcome to Parc-it</h2>
           <div className='main-description'>
             <div className='description-content for-right'>
-              <h3 className='mini-titles'>What does P.A.R.C do?</h3>
+              <h3 className='mini-titles'>What is Parc-it?</h3>
               <p>
-                P.A.R.C. stands for Parking At Residential Communities.
-                What is parc? Parc is an app where anyone with a private
-                parking spot or driveway can list it so some other
-                driver could park their car there for a low flat rate. Our
-                main goal is to provide users with a simple way to earn some
-                extra cash on the side. We also want to provide drivers with
-                an easy way to find cheap parking spots that can last more
-                than just the normal 2 hours.
+                P.a.r.c stands for Parking At Residential Communities.
+                We want to help you find parking in major cities or make a few extra bucks on the side 
+                if you have a private parking spot.
+              </p>
+              <p>
+                You, as a commuter, can look at parkings that are in the San Francisco area
+                or search for a parking spot in a desired location and book it with a few clicks. We want to make parking
+                cheap, affordable, and most importantly easy! 
+              </p>
+              <p>
+                What if you have a private parking spot that you dont use? Well... you cant list it
+                on our application and we will host it for you. When a commuter books your parking spot,
+                you get PAID!
               </p>
             </div>
             <div className='description-content for-left'>
@@ -42,6 +47,12 @@ class MainPage extends React.Component {
                 in cities. We hope to grow our idea and turn it into
                 something that can make a difference in the future.
               </p>
+            <h3 className='mini-titles'>Our goals</h3>
+              <ul>
+                <li>Make parking EASY, FAST, and AFFORDABLE</li>
+                <li>Help you EARN money on the side with a few clicks</li>
+                <li>Let you Plan your trips with secured parking beforehand</li>
+              </ul>
             </div>
           </div>
         </div>
