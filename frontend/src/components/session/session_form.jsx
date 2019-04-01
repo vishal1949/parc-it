@@ -20,6 +20,9 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        if (this.state.email === '' || this.state.password === '' ||this.state.firstname === ''){
+            alert("Some information is missing");
+        }
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(() => { this.props.closeModal() });
     }
