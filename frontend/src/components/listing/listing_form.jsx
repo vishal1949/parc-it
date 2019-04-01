@@ -42,7 +42,6 @@ geocodeRequest(address) {
             //response is the object the api returns
             //refer to this if you need help
             //https://developers.google.com/maps/documentation/geocoding/intro
-            // console.log(response.data.results[0].geometry.location)
             return response.results[0].geometry.location;
             // return coordinates;
             //this is where we get an object with the results inside
@@ -126,7 +125,7 @@ handleFile(e){
       <div className='entire-listing-form'>
       <div className='title-holder'>
           <h1 className='main-title-new'>Make your very own listing! </h1>
-          <div className='main-title-new'>You're one step away from earning yourself some extra cash! Please fill
+          <div className='main-title-new make-text-black'>You're one step away from earning yourself some extra cash! Please fill
               out the form below so we can get you settled in and ready to see the cash
               come in to your pockets. We hope that you spread the word and bring your
               friends and family as new users so they can start earning as well.

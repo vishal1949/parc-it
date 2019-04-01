@@ -96,15 +96,9 @@ class ListingIndex extends React.Component{
     };
     
     if(this.coordinates.lat !== 0){
-      // this.setState({center: this.coordinates})
       this.center.lat = this.coordinates.lat;
       this.center.lng = this.coordinates.lng;
-      // this.coordinates.lat = 0;
     }
-    // if(this.center.lat !== this.coordinates.lat){
-    //   this.center.lat = this.coordinates.lat;
-    //   this.center.lng = this.coordinates.lng;
-    // }
 
     return(
       <>

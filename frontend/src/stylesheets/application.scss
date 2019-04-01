@@ -35,6 +35,10 @@ html header h1.main-logo{
     text-decoration: none;
 }
 
+.make-text-black{
+    color: black;
+}
+
 h1#main-logo{
     text-decoration: none;
     background: url(./parclogo.jpg) center no-repeat;
@@ -309,21 +313,34 @@ footer{
     border: 1px solid black;
     margin-left: -20px;
     margin-top: -5px;
-    padding: 5px;
-    padding-bottom: 7px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-align: center;
-    width: 20px;
-    height: 20px;
-    background: lightgray;
-
-
+    width: 10px;
+    height: 10px;
+    background: black;
+    color: white;
 }
 .close-modal-x:hover{
     cursor: pointer;
 }
 
+.switch-form{
+    background-color: rgb(154, 222, 52);
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.switch-form:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
 .login-form-container{
-    border: 2px solid #009900;
+    border: 1px solid black;
     background: white;
     border-radius: 5%;
     padding: 20px;
@@ -349,6 +366,11 @@ input#text-box {
     margin-left: 30px;
     padding: 10px 0px;
     margin-bottom: 10px;
+    background-color: rgb(154, 222, 52)
+}
+
+.change-buttons{
+    background-color: rgb(154, 222, 52)
 }
 
 .demo-button{
@@ -356,8 +378,13 @@ input#text-box {
     margin-left: 30px;
     padding: 10px 0px;
     margin-bottom: 10px;
+    background-color: rgb(154, 222, 52)
 }
 
+.demo-button:hover{
+    cursor: pointer;
+    opacity: .7;
+}
 #session-submit:hover{
     cursor: pointer;
     opacity: .7;
@@ -412,10 +439,17 @@ input#text-box {
 }
 
 input.photo-submit-button{
-    width: 222px;
+    width: 228px;
     margin-left: 30px;
-    // padding: 20px;
-    font-size: 80px;
+    margin-right: auto;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: rgb(154, 222, 52);
+}
+input.photo-submit-button:hover{
+    cursor: pointer;
+    opacity: .7;
 }
 
 .main-title-new{
