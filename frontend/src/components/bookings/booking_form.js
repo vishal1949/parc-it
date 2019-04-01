@@ -29,6 +29,11 @@ class BookingForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (this.state.startDate !== null || this.state.endDate !== null) {
+      alert("Booking has been made and saved!")
+      this.props.history.push('/');
+      return;
+    }
     const booking = {
       user: this.state.user.id,
       listingId: this.props.listing._id,
@@ -77,6 +82,7 @@ class BookingForm extends Component {
       focusedInput: null,
     });
   }
+
 
   render() {
     if (this.props.bookings === undefined) return null;

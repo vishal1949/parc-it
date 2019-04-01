@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import {filterBookings} from '../../actions/selectors';
 import BookingForm from './booking_form';
+import {withRouter} from 'react-router-dom'
 import {
   createBooking,
   fetchAllListingBookings,
@@ -20,6 +21,5 @@ const mapDispatchToProps = (dispatch) => {
   });
 };
 
-const BookingFormContainer =
-  connect(mapStateToProps, mapDispatchToProps)(BookingForm);
-export default BookingFormContainer;
+  
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BookingForm));
