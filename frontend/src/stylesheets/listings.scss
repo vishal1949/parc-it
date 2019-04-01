@@ -1,7 +1,6 @@
 $parc-green: #009900;
 
-.listing-index {
-  height: 65vh;
+.listing-index2 {
   h1 {
     // background-color: #009900;
     background: rgba(167, 201, 160, 0.4);
@@ -10,12 +9,19 @@ $parc-green: #009900;
     border-radius: 3px;
     margin: 0 auto;
     padding: 50px 20px;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
     text-align: center;
     width: 40%;
   }
+  margin-bottom: 120px;
+  margin-top: 50px;
 
 }
+
+.listing-index{
+  height: 450px;
+}
+
 .all-listings {
   margin-left: 4%;
   display: flex;

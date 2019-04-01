@@ -11,11 +11,16 @@ class ListingIndex extends React.Component{
     super(props);
     this.geocodeRequest.bind(this);
     this.filterListings.bind(this);
-
+    this.coordinates = { lat: 0, lng: 0 }
     this.state = {
-      listing: null
+      listing: null,
+      // coordinates: { lat: 0, lng: 0 }
     };
     this.changeListing = this.changeListing.bind(this);
+    if(this.props.search){
+      this.results = this.filterListings();
+      this.results =[];
+    }
   }
 
 
@@ -25,9 +30,7 @@ class ListingIndex extends React.Component{
   }
 
   componentDidMount(){
-    // this.props.fetchListings().then(action =>{
-    //   this.setState({ listing: action.listings });
-    // });
+    // this.props.fetchListings();
     this.props.fetchListings().then(action =>{
       this.setState({ listing: action.listings[0] });
     });
@@ -36,23 +39,23 @@ class ListingIndex extends React.Component{
 
 
 
-  filterListings(state){
-    let result = [];
-    let listings = state.entities.listings;
-    let search = state.ui.search;
-    let listingsArray = Object.values(listings);
-    let coordinates = { lat: 0, lng: 0 }
-    this.geocodeRequest(search).then(response => {
-      coordinates.lat = response.lat;
-      coordinates.lng = response.lng;
-      listingsArray.map(listing => {
-        if ((listing.lat <= coordinates.lat + .0055 && listing.lat >= coordinates.lat - .0055) &&
-          (listing.lng <= coordinates.lng + .0083 && listing.lng >= coordinates.lng - .0083)) {
-          result.push(listing);
-        }
-      });
-      console.log(result);
-      return result;
+  filterListings(){
+    // let result = [];
+    console.log("reaching this")
+    let listings = this.props.listings;
+    // let search = this.props.search;
+    // let listingsArray = Object.values(listings);
+    this.geocodeRequest(this.props.search).then(response => {
+      this.coordinates.lat = response.lat;
+      this.coordinates.lng = response.lng;
+      // listingsArray.map(listing => {
+      //   if ((listing.lat <= this.coordinates.lat + .0055 && listing.lat >= this.coordinates.lat - .0055) &&
+      //     (listing.lng <= this.coordinates.lng + .0083 && listing.lng >= this.coordinates.lng - .0083)) {
+      //     result.push(listing);
+      //   }
+      // });
+      // console.log(result);
+      // return result;
     });
   }
 
@@ -70,12 +73,21 @@ class ListingIndex extends React.Component{
   }
 
   render(){
-    // debugger
+    
     if (Object.keys(this.props.listings).length === 0) {
       return null;
       // can add little loading screen here
     }
-    const listingsArray = Object.values(this.props.listings);
+    let listingsArray = Object.values(this.props.listings);
+    const listings = Object.values(this.props.listings);
+    if(this.coordinates.lat !== 0 || this.coordinates.lng !== 0){
+      listingsArray.map(listing => {
+        if ((listing.lat <= this.coordinates.lat + .0055 && listing.lat >= this.coordinates.lat - .0055) &&
+          (listing.lng <= this.coordinates.lng + .0083 && listing.lng >= this.coordinates.lng - .0083)) {
+          listings.push(listing);
+        }
+      });
+    }
     if(this.state.listing === null){
       return null;
     }
@@ -91,15 +103,20 @@ class ListingIndex extends React.Component{
     return(
       <>
       <div className="listing-index">
-        <h1>Available Parking Spots</h1>
           <div className='map-div'>
             <GoogleMapContainer changeListing={this.changeListing} listings={listingsArray} style={listingMapStyle} />
           </div>
       </div>
+        <div className="listing-index2">
+          <h1>Available Parking Spots</h1>
+        </div>
+          {/* <p>
+            Here are
+          </p> */}
           <div className="all-listings">
-            {listingsArray.map(listing => {
+            {(listings.map(listing => {
               return <ListingIndexItem listing={listing} key={listing.id} />
-            })}
+            }))}
             {/* <ListingIndexItem listing={this.state.listing} />  */}
           </div>
         
