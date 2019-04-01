@@ -37,6 +37,12 @@ html header h1.main-logo{
 
 h1#main-logo{
     text-decoration: none;
+    background: url(./parclogo.jpg) center no-repeat;
+    background-size: contain;
+    height: 90px;
+    width: 100px;
+    margin: 0px;
+    padding-left: 20px;
 }
 
 //search bar and navbar
