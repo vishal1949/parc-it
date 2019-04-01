@@ -93,13 +93,17 @@ class ListingIndex extends React.Component{
       'marginRight': 'auto',
       'zIndex': '0',
     };
-    
+    let center = { lat: 37.7599043, lng: -122.4256016 }
+    if(this.coordinates.lat !== 0){
+      center.lat = this.coordinates.lat;
+      center.lng = this.coordinates.lng;
+    }
 
     return(
       <>
       <div className="listing-index">
           <div className='map-div'>
-            <GoogleMapContainer listings={listings} style={listingMapStyle} />
+            <GoogleMapContainer listings={listings} style={listingMapStyle} newCenter={center} />
           </div>
       </div>
         <div className="listing-index2">
