@@ -25,6 +25,7 @@ body {
   margin: 0px;
 }
 
+
 // Components
 @import './listings.scss';
 
@@ -266,10 +267,7 @@ input#text-box {
 }
 
 .map-container{
-    div{
-        z-index: 0;
-        
-    }
+    height: 100px;
 }
 
 .listing-form{

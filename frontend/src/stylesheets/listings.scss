@@ -6,9 +6,10 @@ $parc-green: #009900;
     background: rgba(167, 201, 160, 0.4);
     text-shadow: 4px 4px rgba(0, 0, 0, 0.9);
     color: white;
+    font-size: 300%;
     border-radius: 3px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 85px 20px;
     // margin-bottom: 2em;
     text-align: center;
     width: 40%;
@@ -57,12 +58,14 @@ $parc-green: #009900;
       font-weight: 400;
       border-radius: 3px;
       margin: 0 auto;
+      margin: 5px;
       margin-left: 5%;
     }
     #go-to-parking{
       // text-decoration: none;
       color: blue;
       text-shadow: none;
+      margin-top: 30px;
       font-size: 16px;
     }
     h3{
