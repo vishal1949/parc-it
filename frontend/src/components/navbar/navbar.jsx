@@ -25,8 +25,21 @@ class Navbar extends React.Component{
         if(this.props.loggedIn === false){
             return (
                 <div className='login-signup'>
-                    <Link to='/listings' className='signin-stuff'><p>Parkings</p></Link> 
-                    <Link to='/listings/new' className='signin-stuff'><p>Host Parking</p></Link> 
+                    <Link to='/listings' className='signin-stuff'>
+                        <p className='parking-only'>Parkings
+                            <p className='hide-parking'>
+                                Here you can see all the listings around the SF mission district. We hope to deliver a wider
+                                range of parkings as we grow!
+                            </p> 
+                        </p>
+                    </Link> 
+                    <Link to='/listings/new' className='signin-stuff'>
+                        <p className='host-parking'>Host Parking
+                            <p className='hide-host'>
+                                If you have a private parking spot and would like to earn some money, then click this button.
+                            </p>
+                        </p>
+                    </Link> 
                     <a className='signin-stuff' href=''
                         onClick={e => {
                             this.handleEvent(e);
@@ -44,8 +57,22 @@ class Navbar extends React.Component{
         } else  {
             return(
                 <div className='login-signup'>
-                    <Link to='/listings' className='signin-stuff'><p>Parkings</p></Link> 
-                    <Link to='/listings/new' className='signin-stuff'><p>Host Parking</p></Link> 
+                    <Link to='/listings' className='signin-stuff'>
+                        <p className='parking-only'>Parkings
+                            <p className='hide-parking'>
+                                Here you can see all the listings around the SF mission district. We hope to deliver a wider
+                                range of parkings as we grow!
+                            </p> 
+                        </p>
+                    </Link>
+                   
+                    <Link to='/listings/new' className='signin-stuff'>
+                        <p className='host-parking'>Host Parking
+                            <p className='hide-host-logout'>
+                                If you have a private parking spot and would like to earn some money, then click this button.
+                            </p>
+                        </p>
+                    </Link> 
                     <a className='signin-stuff' href=''
                         onClick={this.logout}><p>Log Out</p>
                     </a>

@@ -52,6 +52,20 @@ h1#main-logo{
     align-items: center;
 }
 
+p.hide-parking{
+    display: none;
+
+    // width: 300px;
+    // height: 600px;
+}
+p.hide-host{
+    display: none;
+}
+
+p.hide-host-logout{
+    display: none;
+}
+
 .main-search-bar{
     padding-left: 20px;
     padding-bottom: 10px;
@@ -71,6 +85,7 @@ h1#main-logo{
     padding: 5px;
     top: 0px;
     position: sticky;
+    height: 90px;
 }
 
 .login-signup{
@@ -80,10 +95,15 @@ h1#main-logo{
 }
 
 .signin-stuff{
+    display: block;
     margin: 5px;
     color: white;
     padding: 5px;
     border-radius: 3px;
+    width: 70px;
+    height: 60px;
+    text-align: center;
+    align-self: center;
 }
 .signin-stuff-logout{
     color: white;
@@ -93,12 +113,79 @@ h1#main-logo{
 .signin-stuff-logout:hover{
     color: #009900;
 }
+.parking-only{
+    vertical-align: middle;
+    width: inherit;
+    height: inherit;
+}
+
+.host-parking{
+
+    width: inherit;
+    height: inherit;
+}
+
+.host-parking:hover{
+    .hide-host{
+        display: block;
+        float: left;
+        text-align: left;
+        width: 300%;
+        margin-left: -5px;
+        margin-top: 15px;
+        margin-right: auto;
+        background: white;
+        opacity: .9;
+        font-size: 12px;
+        padding: 20px;
+        border-right: 3px solid black;
+        transition-delay: 0s, 0s, 0.3s;
+        border-bottom: 3px solid black;
+    }
+    .hide-host-logout{
+        display: block;
+        float: left;
+        text-align: left;
+        width: 300%;
+        margin-left: -80px;
+        margin-top: 15px;
+        margin-right: auto;
+        background: white;
+        opacity: .9;
+        font-size: 12px;
+        padding: 20px;
+        border-right: 3px solid black;
+        transition-delay: 0s, 0s, 0.3s;
+        border-bottom: 3px solid black;
+    }
+    
+}
+.parking-only:hover{
+    .hide-parking{
+        display: block;
+        float: left;
+        text-align: left;
+        width: 300%;
+        margin-left: -5px;
+        margin-top: 35px;
+        background: white;
+        font-size: 12px;
+        opacity: .9;
+        padding: 20px;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+        transition-delay: 0s, 0s, 0.3s;
+    }
+}
 
 .signin-stuff:hover{
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+
     border-right: 3px solid black;
     border-bottom: 3px solid black;
     background: white;
     color: #009900;
+    
 }
 
 .gray-bar{
