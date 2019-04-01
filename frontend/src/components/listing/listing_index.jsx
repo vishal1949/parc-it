@@ -71,7 +71,6 @@ class ListingIndex extends React.Component{
     
     if (Object.keys(this.props.listings).length === 0) {
       return null;
-      // can add little loading screen here
     }
     let listingsArray = Object.values(this.props.listings);
     let listings = Object.values(this.props.listings);

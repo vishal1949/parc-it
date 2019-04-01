@@ -54,7 +54,6 @@ class GoogleMap extends Component {
       'marginLeft': 'auto',
       'marginRight': 'auto',
     };
-
     const markers = this.props.listings.map((listing) => {
       return (
         <Marker
@@ -99,7 +98,7 @@ class GoogleMap extends Component {
           google={this.props.google}
           onClick={this.onMapClick}
           zoom={14}
-          initialCenter={{lat: 37.7599043, lng: -122.4256016}}
+          initialCenter={this.props.newCenter}
           >
           { markers }
           { infoWindows }

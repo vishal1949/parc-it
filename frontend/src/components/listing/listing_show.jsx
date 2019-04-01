@@ -4,6 +4,9 @@ import BookingFormContainer from '../bookings/booking_form_container';
 import "react-dates/initialize";
 
 class ListingShow extends React.Component{
+  constructor(props){
+    super(props)
+  }
   componentDidMount(){
     this.props.fetchListing(this.props.listingId);
   }
@@ -21,7 +24,10 @@ class ListingShow extends React.Component{
     };
     return(
       <div className="listing-show">
-          {/* <GoogleMapContainer listings={[this.props.listing]} style={listingMapStyle} /> */}
+          <GoogleMapContainer 
+            listings={[this.props.listing]} 
+            style={listingMapStyle} 
+            newCenter={{lat: this.props.listing.lat, lng: this.props.listing.lng}}/>
           <div className='show-info'>
             <div className='show-listing-flex'>
               <img className='parking-images' src={this.props.listing.photo} />

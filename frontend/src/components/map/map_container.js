@@ -3,11 +3,17 @@ import GoogleMapFinal from './map';
 import { fetchListings } from '../../actions/listing_action';
 
 const mapStateToProps = (state, ownProps) => {
-  let listings = Object.values(state.entities.listings);
+  let listings;
+  if(!ownProps.listings){
+    listings = Object.values(state.entities.listings);
+  }else{
+    listings = Object.values(ownProps.listings);
+  }
   return ({
     listings,
     style: ownProps.style,
-    changeListing: ownProps.changeListing
+    changeListing: ownProps.changeListing,
+    newCenter : ownProps.newCenter,
   });
 };
 const mapDispatchToProps = (dispatch) => {
