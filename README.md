@@ -25,5 +25,11 @@ An application/website that gives users the ability to host a private parking sp
 
 ## Google Map
 Added Google maps to display real time hosted locations of parking spots in the San Francisco area. If a user would just like to look near a specific area in San Francisco, the map updates as the search filters the parkings. The search parameter is used to make an api request to Google maps geocoder, which is done asynchronously, and once a promise is returned, the map filters its markers based on the filtered out listings
+### No Search
 ![Initial](/readmeImgs/map1.jpg)
+### With Search
 ![Initial](/readmeImgs/map2.jpg)
+
+## Airbnb Opensource Calendar React Component
+For the booking calendar, the application incorporates the Airbnb calendar. It features blocked out dates for bookings that have already been made. If a user is not logged in, the booking will not be created. It also renders errors when a user does not input any dates or half-filled dates.
+![calendar](/readmeImgs/calendar.jpg)
