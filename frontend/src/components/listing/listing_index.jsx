@@ -40,7 +40,6 @@ class ListingIndex extends React.Component{
 
 
   filterListings(){
-    console.log("reaching this")
     this.geocodeRequest(this.props.search).then(response => {
       this.coordinates.lat = response.lat;
       this.coordinates.lng = response.lng;
@@ -65,6 +64,10 @@ class ListingIndex extends React.Component{
   
 
   render(){
+    if(this.props.search !== '' && this.props.search !== this.state.search){
+      this.setState({search: this.props.search})
+      this.filterListings();
+    }
     if (Object.keys(this.props.listings).length === 0) {
       return null;
     }
