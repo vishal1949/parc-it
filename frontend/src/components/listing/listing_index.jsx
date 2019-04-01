@@ -102,12 +102,10 @@ class ListingIndex extends React.Component{
             <GoogleMapContainer listings={listings} style={listingMapStyle} newCenter={center} />
           </div>
       </div>
+        <div className='sf-divider'></div>
         <div className="listing-index2">
           <h1>Available Parking Spots</h1>
         </div>
-          {/* <p>
-            Here are
-          </p> */}
           <div className="all-listings">
             {(listings.map(listing => {
               return <ListingIndexItem listing={listing} key={listing.id} />

@@ -10,6 +10,7 @@ $parc-green: #009900;
     border-radius: 3px;
     margin: 0 auto;
     padding: 85px 20px;
+    margin-top: 50px;
     // margin-bottom: 2em;
     text-align: center;
     width: 40%;
@@ -21,6 +22,20 @@ $parc-green: #009900;
 
 .listing-index{
   height: 450px;
+}
+
+.sf-divider{
+  height: 150px;
+  margin-bottom: 75px;
+  margin-top: 50px;
+  // background-color:black;
+  padding: 20px;
+  background-color: green;
+  background: url(./sf-divider.jpg) center;
+  opacity: .7;
+  // background-size: cover;
+  background-repeat: repeat;
+  width: 100%;
 }
 
 .all-listings {
