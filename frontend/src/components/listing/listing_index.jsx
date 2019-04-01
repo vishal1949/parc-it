@@ -12,9 +12,11 @@ class ListingIndex extends React.Component{
     this.geocodeRequest.bind(this);
     this.filterListings.bind(this);
     this.coordinates = { lat: 0, lng: 0 }
+    this.center = { lat: 37.7599043, lng: -122.4256016 };
     this.state = {
       listing: null,
       search: null,
+      center: { lat: 37.7599043, lng: -122.4256016 },
     };
     this.changeListing = this.changeListing.bind(this);
     if(this.props.search){
@@ -92,17 +94,23 @@ class ListingIndex extends React.Component{
       'marginRight': 'auto',
       'zIndex': '0',
     };
-    let center = { lat: 37.7599043, lng: -122.4256016 }
+    
     if(this.coordinates.lat !== 0){
-      center.lat = this.coordinates.lat;
-      center.lng = this.coordinates.lng;
+      // this.setState({center: this.coordinates})
+      this.center.lat = this.coordinates.lat;
+      this.center.lng = this.coordinates.lng;
+      // this.coordinates.lat = 0;
     }
+    // if(this.center.lat !== this.coordinates.lat){
+    //   this.center.lat = this.coordinates.lat;
+    //   this.center.lng = this.coordinates.lng;
+    // }
 
     return(
       <>
       <div className="listing-index">
           <div className='map-div'>
-            <GoogleMapContainer listings={listings} style={listingMapStyle} newCenter={center} />
+            <GoogleMapContainer listings={listings} style={listingMapStyle} newCenter={this.center} />
           </div>
       </div>
         <div className='sf-divider'></div>
@@ -115,7 +123,6 @@ class ListingIndex extends React.Component{
             }))}
             {/* <ListingIndexItem listing={this.state.listing} />  */}
           </div>
-        
     </>
     )
   }
