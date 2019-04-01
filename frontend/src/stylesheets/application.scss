@@ -264,6 +264,14 @@ input#text-box {
     color: white;
     text-decoration: underline;
 }
+
+.map-container{
+    div{
+        z-index: 0;
+        
+    }
+}
+
 .listing-form{
     // margin-left: 30px;
     text-align: center;
@@ -329,30 +337,32 @@ input.photo-submit-button{
     z-index: -1;
 }
 
-
+#justforflex{
+    display: flex;
+    margin-bottom: 40%;
+}
 
 // @@@@@@@@@@@@@@@@@@@@@@@@ SHOW PAGE @@@@@@@@@@@@@@@@@@@
 
 .show-info{
     background: rgba(167, 201, 160, 0.4);
-    border: 1px solid white;
     border-radius: 2px;
-    width: 50%;
     margin-left: 40px;
     color: white;
     text-shadow:
-	    -1px -1px 0 #000,
-	    1px -1px 0 #000,
-	    -1px 1px 0 #000,
-        1px 1px 0 #000;
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
     h2{
         text-align: center;
         margin-bottom: 10px;
         color: rgb(200, 218, 9);
     }
-
+    
     .show-listing-flex{
         display: flex;
+        border: 1px solid white;
 
         img.parking-images{
             // box-sizing: border-box;
@@ -383,8 +393,8 @@ input.photo-submit-button{
     
 }
 
-.booking-form-container{
-    margin-left: 2.1%;
+div.booking-form-container{
+    margin-left: 5.1%;
 }
 
 .booking-form{

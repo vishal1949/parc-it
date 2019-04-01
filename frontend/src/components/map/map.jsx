@@ -49,6 +49,7 @@ class GoogleMap extends Component {
     }
 
     const defaultStyle = {
+      position: 'fixed',
       width: '65vw',
       height: '45vh',
       'marginLeft': 'auto',

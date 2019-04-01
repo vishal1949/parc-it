@@ -14,8 +14,7 @@ class ListingIndex extends React.Component{
     this.coordinates = { lat: 0, lng: 0 }
     this.state = {
       listing: null,
-      error: null
-      // coordinates: { lat: 0, lng: 0 }
+      search: null,
     };
     this.changeListing = this.changeListing.bind(this);
     if(this.props.search){
@@ -68,7 +67,6 @@ class ListingIndex extends React.Component{
   
 
   render(){
-    
     if (Object.keys(this.props.listings).length === 0) {
       return null;
     }
