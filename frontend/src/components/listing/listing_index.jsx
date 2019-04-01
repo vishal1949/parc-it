@@ -14,6 +14,7 @@ class ListingIndex extends React.Component{
     this.coordinates = { lat: 0, lng: 0 }
     this.state = {
       listing: null,
+      error: null
       // coordinates: { lat: 0, lng: 0 }
     };
     this.changeListing = this.changeListing.bind(this);
@@ -42,20 +43,11 @@ class ListingIndex extends React.Component{
   filterListings(){
     // let result = [];
     console.log("reaching this")
-    let listings = this.props.listings;
-    // let search = this.props.search;
-    // let listingsArray = Object.values(listings);
     this.geocodeRequest(this.props.search).then(response => {
       this.coordinates.lat = response.lat;
       this.coordinates.lng = response.lng;
-      // listingsArray.map(listing => {
-      //   if ((listing.lat <= this.coordinates.lat + .0055 && listing.lat >= this.coordinates.lat - .0055) &&
-      //     (listing.lng <= this.coordinates.lng + .0083 && listing.lng >= this.coordinates.lng - .0083)) {
-      //     result.push(listing);
-      //   }
-      // });
-      // console.log(result);
-      // return result;
+    }).catch(err => {
+      this.setState({error: err})
     });
   }
 
@@ -69,8 +61,11 @@ class ListingIndex extends React.Component{
     ).then(res => res.json())
       .then(response => {
         return response.results[0].geometry.location;
-      });
-  }
+      }).catch(err => {
+          this.setState({error: err})
+        })
+      };
+  
 
   render(){
     
@@ -105,7 +100,7 @@ class ListingIndex extends React.Component{
       <>
       <div className="listing-index">
           <div className='map-div'>
-            <GoogleMapContainer changeListing={this.changeListing} listings={listingsArray} style={listingMapStyle} />
+            <GoogleMapContainer listings={listings} style={listingMapStyle} />
           </div>
       </div>
         <div className="listing-index2">
