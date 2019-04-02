@@ -20,9 +20,9 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        if (this.state.email === '' || this.state.password === '' ||this.state.firstname === ''){
-            alert("Some information is missing");
-        }
+        // if (this.state.email === '' || this.state.password === '' ||this.state.firstname === ''){
+        //     alert("Some information is missing");
+        // }
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(() => { this.props.closeModal() });
     }
@@ -34,17 +34,17 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        if (this.props.errors.length > 0) {
-            return (
-                <ul id="errors">
-                    {this.props.errors.map((error, i) => (
-                        <li key={`error-${i}`}>
-                            {error}
-                        </li>
-                    ))}
-                </ul>
-            );
-        }
+        // if (this.props.errors.length > 0) {
+        //     return (
+        //         <ul id="errors">
+        //             {this.props.errors.map((error, i) => (
+        //                 <li key={`error-${i}`}>
+        //                     {error}
+        //                 </li>
+        //             ))}
+        //         </ul>
+        //     );
+        // }
     }
 
     signupCheck(formType) {
@@ -54,15 +54,15 @@ class SessionForm extends React.Component {
                     <br />
                     <br />
                     <h2 className='signup-continue'>Sign up to continue</h2>
-                    <input id='text-box' type="text" placeholder="First name" value={this.state.first_name} onChange={this.update('first_name')} />
+                    <input id='text-box' type="text" placeholder="First name" value={this.state.first_name} onChange={this.update('firstname')} />
                     <br />
-                    <input id='text-box' type="text" placeholder="Last name" value={this.state.last_name} onChange={this.update('last_name')} />
+                    <input id='text-box' type="text" placeholder="Last name" value={this.state.last_name} onChange={this.update('lastname')} />
                     <br />
                     <input id='text-box' type="text" placeholder="Email Address" value={this.state.email} onChange={this.update('email')} />
                     <br />
                     <input id='text-box' type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
                     <br />
-                    <input id='text-box' type="password" placeholder="Re-enter Password" value={this.state.password} onChange={this.update('password2')} />
+                    <input id='text-box' type="password" placeholder="Re-enter Password" value={this.state.password2} onChange={this.update('password2')} />
                 </div>
             );
         }
@@ -94,8 +94,8 @@ class SessionForm extends React.Component {
     demoLogin(e) {
         e.preventDefault();
         const user = {
-          email: 'ilovebananas@cheese.com',
-          password: 'thisisAfuckingPassword1'
+          email: 'demo@email.com',
+          password: 'password'
         };
         this.props.login(user).then(this.props.closeModal);
     }
