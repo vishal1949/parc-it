@@ -45,6 +45,8 @@ class ListingIndex extends React.Component{
     this.geocodeRequest(this.props.search).then(response => {
       this.coordinates.lat = response.lat;
       this.coordinates.lng = response.lng;
+      this.center.lat = response.lat;
+      this.center.lng = response.lng;
     }).catch(err => {
       this.setState({error: err})
     });
