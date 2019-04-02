@@ -29,11 +29,6 @@ class BookingForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.startDate !== null || this.state.endDate !== null) {
-      alert("Booking has been made and saved!")
-      this.props.history.push('/');
-      return;
-    }
     const booking = {
       user: this.state.user.id,
       listingId: this.props.listing._id,
@@ -42,12 +37,17 @@ class BookingForm extends Component {
       endDate: this.state.endDate._d,
       offMarket: true,
     };
-
+    
     if (this.errorDates(booking)) {
       this.state.errors = true;
       this.resetState();
     } else {
       this.createBooking(booking);
+    }
+    if (this.state.startDate !== null || this.state.endDate !== null) {
+      alert("Booking has been made and saved!")
+      this.props.history.push('/');
+      return;
     }
   }
 

@@ -17,10 +17,10 @@ module.exports = function validateBookingInput(data) {
     errors.text = "Start date must be before end date";
   }
 
-  let currentDate = new Date();
-  // if (currentDate > startDate) {
-  //   errors.text = "Booking must start today or in the future.";
-  // }
+  // let currentDate = new Date();
+  // // if (currentDate > startDate) {
+  // //   errors.text = "Booking must start today or in the future.";
+  // // }
 
   return {
     errors,
