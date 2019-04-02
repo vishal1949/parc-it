@@ -34,17 +34,17 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        if (this.props.errors.length > 0) {
-            return (
-                <ul id="errors">
-                    {this.props.errors.map((error, i) => (
-                        <li key={`error-${i}`}>
-                            {error}
-                        </li>
-                    ))}
-                </ul>
-            );
-        }
+        // if (this.props.errors.length > 0) {
+        //     return (
+        //         <ul id="errors">
+        //             {this.props.errors.map((error, i) => (
+        //                 <li key={`error-${i}`}>
+        //                     {error}
+        //                 </li>
+        //             ))}
+        //         </ul>
+        //     );
+        // }
     }
 
     signupCheck(formType) {
